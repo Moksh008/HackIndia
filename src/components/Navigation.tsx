@@ -24,6 +24,9 @@ export default function Navbar() {
           <a href="/analyze" className="hover:text-indigo-600">
             Analyze
           </a>
+          <a href="/dashboard" className="hover:text-indigo-600">
+            Dashboard
+          </a>
         </div>
 
         {/* Login Button (always visible) */}
@@ -43,17 +46,21 @@ export default function Navbar() {
       {/* Mobile Menu Dropdown */}
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4 text-gray-700 font-medium">
-          <a href="#" className="block hover:text-indigo-600">
+          <a href="/" className="block hover:text-indigo-600">
             Home
           </a>
-          <a href="#" className="block hover:text-indigo-600">
-            Explore
-          </a>
-          <a href="#" className="block hover:text-indigo-600">
+          <a href="/marketplace" className="block hover:text-indigo-600">
             Marketplace
           </a>
-          <a href="#" className="block hover:text-indigo-600">
-            About
+          <a href="/mint" className="block hover:text-indigo-600">
+            Mint
+          </a>
+          <a href="/analyze" className="block hover:text-indigo-600">
+            Analyze
+          </a>
+
+          <a href="/dashboard" className="block hover:text-indigo-600">
+            Dashboard
           </a>
           <button className="w-full px-5 py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition">
             Login

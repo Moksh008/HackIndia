@@ -95,16 +95,16 @@ const ConditionalNavigation: React.FC = () => {
         {/* Mobile Menu Dropdown */}
         {isOpen && (
           <div className="md:hidden bg-white shadow-lg px-6 py-4 space-y-4 text-gray-700 font-medium">
-            <a href="#" className="block hover:text-indigo-600">
+            <a href="/" className="block hover:text-indigo-600">
               Home
             </a>
-            <a href="#" className="block hover:text-indigo-600">
+            <a href="/marketplace" className="block hover:text-indigo-600">
               MarketPlace
             </a>
-            <a href="/marketplace" className="block hover:text-indigo-600">
+            <a href="/mint" className="block hover:text-indigo-600">
               Mint
             </a>
-            <a href="#" className="block hover:text-indigo-600">
+            <a href="/analyze" className="block hover:text-indigo-600">
               Analyze
             </a>
             <a href="/dashboard" className="hover:text-indigo-600">
