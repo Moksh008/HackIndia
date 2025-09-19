@@ -7,6 +7,12 @@ import { Badge } from "@/components/ui/badge";
 import ConditionalNavigation from "@/components/ConditionalNavigation";
 import ProtectedAction from "@/components/ProtectedAction";
 
+// Import images
+import property1 from "@/assets/property-1.jpg";
+import property2 from "@/assets/property-2.jpg";
+import property3 from "@/assets/property-3.jpg";
+import heroHouse from "@/assets/hero-house.jpg";
+
 const properties = [
   {
     id: 1,
@@ -14,7 +20,7 @@ const properties = [
     location: "Malibu, CA",
     price: "2.5 ETH",
     usdPrice: "$4,250,000",
-    image: "/src/assets/property-1.jpg",
+    image: property1,
     beds: 4,
     baths: 3,
     sqft: 3200,
@@ -27,7 +33,7 @@ const properties = [
     location: "Manhattan, NY",
     price: "3.8 ETH",
     usdPrice: "$6,460,000",
-    image: "/src/assets/property-2.jpg",
+    image: property2,
     beds: 3,
     baths: 2,
     sqft: 2800,
@@ -40,7 +46,7 @@ const properties = [
     location: "Miami, FL",
     price: "1.9 ETH",
     usdPrice: "$3,230,000",
-    image: "/src/assets/property-3.jpg",
+    image: property3,
     beds: 5,
     baths: 4,
     sqft: 4100,
@@ -53,7 +59,7 @@ const properties = [
     location: "Aspen, CO",
     price: "1.2 ETH",
     usdPrice: "$2,040,000",
-    image: "/src/assets/hero-house.jpg",
+    image: heroHouse,
     beds: 3,
     baths: 2,
     sqft: 2400,
