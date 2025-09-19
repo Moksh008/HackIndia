@@ -39,6 +39,7 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
 
   const connectWallet = async () => {
     try {
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
       const ethereum = (window as any).ethereum;
       if (!ethereum || !ethereum.request) {
         alert('MetaMask not detected. Please install MetaMask to continue.');
@@ -70,10 +71,14 @@ export const AuthProvider: React.FC<{ children: React.ReactNode }> = ({ children
         window.location.reload();
       };
 
-      ethereum.removeListener && ethereum.removeListener('accountsChanged', handleAccountsChanged);
-      ethereum.removeListener && ethereum.removeListener('chainChanged', handleChainChanged);
-      ethereum.on && ethereum.on('accountsChanged', handleAccountsChanged);
-      ethereum.on && ethereum.on('chainChanged', handleChainChanged);
+      if (ethereum.removeListener) {
+        ethereum.removeListener('accountsChanged', handleAccountsChanged);
+        ethereum.removeListener('chainChanged', handleChainChanged);
+      }
+      if (ethereum.on) {
+        ethereum.on('accountsChanged', handleAccountsChanged);
+        ethereum.on('chainChanged', handleChainChanged);
+      }
     } catch (error) {
       console.error('Failed to connect wallet:', error);
       alert('Failed to connect wallet. Please try again.');
